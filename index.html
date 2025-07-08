@@ -1,15 +1,91 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Estéban Gabory</title>
-  <style type="text/css">.styles-module_blinkingCursor__yugAC{color:inherit;font:inherit;left:3px;line-height:inherit;opacity:1;position:relative;top:0}.styles-module_blinking__9VXRT{animation-duration:.8s;animation-iteration-count:infinite;animation-name:styles-module_blink__rqfaf}@keyframes styles-module_blink__rqfaf{0%{opacity:1}to{opacity:0}}</style></head>
-  <body style="isolation: isolate;">
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
 
-  <figure class="float right">
-    <img src="portrait.jpg" alt="Portrait picture taken at CWI" />
-</figure>
-    
-<p> I am currently a postdoc at the University of Palermo. My research is generally on strings, and I am interested in both the algorithmic and the combinatorial aspect of stringology.</p>
-<p> One of my main interests lies in strings with <i> elasticity </i>, namely data structures that respresents multiple similar strings. They are motivated by bioinformatics, and, in particular, pangenomics</p>
-<p> Another line of research I am working on is the study of the structural properties of BWT, its link with de Bruijn words, and abstract algebra.</p>
-<p> Finally, I have some ongoing projects on consensus problems, in the angle of parameterized complexity </p>
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .portrait {
+      flex: 1 1 250px;
+      max-width: 250px;
+      margin-right: 2rem;
+    }
+
+    .portrait img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .content {
+      flex: 3 1 400px;
+    }
+
+    .content p {
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .portrait {
+        margin: 0 0 1.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Estéban Gabory</h1>
+  </header>
+
+  <main class="container">
+    <div class="portrait">
+      <img src="portrait.jpg" alt="Portrait of Estéban Gabory" />
+    </div>
+
+    <div class="content">
+      <p>I am currently a postdoc at the University of Palermo. My research is generally on strings, and I am interested in both the algorithmic and combinatorial aspects of stringology.</p>
+
+      <p>One of my main interests lies in strings with <em>elasticity</em>, namely data structures that represent multiple similar strings. These are motivated by bioinformatics, and in particular, pangenomics.</p>
+
+      <p>Another line of research I am working on is the study of the structural properties of the Burrows–Wheeler Transform (BWT), its links with de&nbsp;Bruijn words, and abstract algebra.</p>
+
+      <p>Finally, I have some ongoing projects on consensus problems, from the perspective of parameterized complexity.</p>
+    </div>
+  </main>
+
+</body>
+</html>
