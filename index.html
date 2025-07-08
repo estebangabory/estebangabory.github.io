@@ -2,171 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Estéban Gabory</title>
   <style>
-    /* Reset & base */
-    * {
-      box-sizing: border-box;
-    }
     body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fefefe;
-      color: #1e1e2f;
-      line-height: 1.55;
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    a {
-      color: #4f46e5;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover,
-    a:focus {
-      color: #4338ca;
-      text-decoration: underline;
-      outline: none;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
     }
 
-    /* Header */
     header {
-      background: linear-gradient(90deg, #4f46e5, #3b82f6);
-      color: white;
-      padding: 3rem 1rem 4rem;
+      background-color: #003366;
+      color: #fff;
+      padding: 2rem;
       text-align: center;
-      box-shadow: 0 4px 8px rgb(79 70 229 / 0.15);
-      border-bottom-left-radius: 16px;
-      border-bottom-right-radius: 16px;
     }
+
     header h1 {
       margin: 0;
-      font-size: 3rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+      font-size: 2.5rem;
     }
 
-    /* Main container */
-    main.container {
+    .container {
       display: flex;
+      flex-wrap: wrap;
       max-width: 960px;
-      margin: -3rem auto 2rem; /* pull up to header */
-      padding: 2rem 1.5rem 3rem;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgb(0 0 0 / 0.05);
-      gap: 2rem;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
 
-    /* Portrait */
-    .portrait {
-      flex: 0 0 180px;
-      max-width: 180px;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 15px rgb(0 0 0 / 0.1);
-      background: #e0e7ff;
-      transition: transform 0.3s ease;
-    }
-    .portrait img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      display: block;
-    }
-    .portrait:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 30px rgb(0 0 0 / 0.15);
-    }
-
-    /* Content */
     .content {
-      flex: 1;
-      font-size: 1.1rem;
-      color: #33334d;
-      font-weight: 500;
-    }
-    .content p + p {
-      margin-top: 1.3rem;
+      flex: 3 1 500px;
+      padding-right: 2rem;
     }
 
-    /* Publications Section */
-    section.publications {
-      max-width: 960px;
-      margin: 3rem auto 4rem;
-      padding: 0 1.5rem;
+    .portrait {
+      flex: 1 1 150px;
+      max-width: 150px;
     }
-    section.publications h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #4f46e5;
+
+    .portrait img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .content p {
       margin-bottom: 1rem;
-      border-bottom: 3px solid #4f46e5;
-      padding-bottom: 0.25rem;
-      max-width: fit-content;
-      letter-spacing: -0.02em;
-    }
-    section.publications p {
-      font-size: 1rem;
-      color: #55557f;
-      margin-bottom: 1.6rem;
     }
 
-    ul.publications {
-      list-style-type: none;
-      padding-left: 0;
-      margin: 0;
-    }
-    ul.publications li {
-      background: #f9f9ff;
-      border-radius: 12px;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1.3rem;
-      box-shadow: 0 2px 5px rgb(100 100 140 / 0.08);
-      transition: box-shadow 0.3s ease;
-    }
-    ul.publications li:hover {
-      box-shadow: 0 4px 16px rgb(100 100 140 / 0.15);
-    }
-    ul.publications li b {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #1e1e2f;
-      display: block;
-      margin-bottom: 0.2rem;
-    }
-    ul.publications li i {
-      color: #6366f1;
-      font-style: italic;
-      margin-bottom: 0.45rem;
-      display: block;
-      font-weight: 500;
-    }
-    ul.publications li a {
-      font-weight: 600;
-      margin-right: 1rem;
-      font-size: 0.95rem;
+    .publications {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
 
-    /* Responsive */
-    @media (max-width: 800px) {
-      main.container {
-        flex-direction: column;
-        margin-top: -2rem;
-        padding: 1.5rem 1rem 2rem;
+    .publications h2 {
+      font-size: 1.6rem;
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+
+    .publications ul {
+      padding-left: 1.2rem;
+    }
+
+    .publications li {
+      margin-bottom: 0.8rem;
+    }
+
+    .publications a {
+      color: #003366;
+      text-decoration: none;
+    }
+
+    .publications a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column-reverse;
+        align-items: center;
       }
-      .portrait {
-        margin: 0 auto 2rem;
-        max-width: 140px;
-        flex: none;
-      }
+
       .content {
-        font-size: 1rem;
+        padding-right: 0;
+      }
+
+      .portrait {
+        margin-bottom: 1.5rem;
       }
     }
   </style>
@@ -177,7 +104,7 @@
     <h1>Estéban Gabory</h1>
   </header>
 
-  <main class="container" role="main" aria-label="Introduction and Biography">
+  <main class="container">
     <div class="content">
       <p>I am currently a postdoctoral researcher at the University of Palermo, working in the field of string algorithms and combinatorics on words. My interests span both the theoretical foundations and algorithmic applications of string processing, particularly in contexts such as bioinformatics.</p>
 
@@ -188,85 +115,89 @@
       <p>In addition, I am involved in projects concerning consensus problems, studied from the perspective of parameterized complexity.</p>
     </div>
 
-    <div class="portrait" aria-label="Portrait of Estéban Gabory">
+    <div class="portrait">
       <img src="portrait.jpg" alt="Portrait of Estéban Gabory" />
     </div>
   </main>
 
-  <section class="publications" aria-label="Publications">
-    <h2>Publications</h2>
-    <p>For a full list of publications, see my <a href="CV.pdf" target="_blank" rel="noopener">CV</a> (last update in July 2025).</p>
-    <ul class="publications">
+  <section class="publications">
+<h2>Publications</h2>
 
-      <li>
-        <b>On Strings Having the Same Length-k Substrings</b>
-        <i>Giulia Bernardini, Alessio Conte, Esteban Gabory, Roberto Grossi, Grigorios Loukides, Solon P. Pissis, Giulia Punzi, Michelle Sweering</i><br />
-        <i>33rd Annual Symposium on Combinatorial Pattern Matching (CPM)</i> (2022)<br />
-        <a href="https://doi.org/10.4230/LIPIcs.CPM.2022.16" target="_blank" rel="noopener">DOI</a> · 
-        <a href="https://inria.hal.science/hal-03829979" target="_blank" rel="noopener">HAL</a> · 
-        <a href="https://inria.hal.science/hal-03829979/file/LIPIcs-CPM-2022-16.pdf" target="_blank" rel="noopener">PDF</a>
-      </li>
+<p>For a full list of publications, see my <a href="CV.pdf" target="_blank">CV</a> (last update in July 2025).</p>
+    
+<ul>
 
-      <li>
-        <b>Elastic-Degenerate String Matching with 1 Error</b>
-        <i>Giulia Bernardini, Esteban Gabory, Solon P. Pissis, Leen Stougie, Michelle Sweering, Wiktor Zuba</i><br />
-        <i>15th Latin American Symposium on Theoretical Informatics (LATIN)</i> (2022)<br />
-        <a href="https://doi.org/10.1007/978-3-031-20624-5_2" target="_blank" rel="noopener">DOI</a>
-      </li>
+  <li>
+    <b>On Strings Having the Same Length-k Substrings</b><br>
+    Giulia Bernardini, Alessio Conte, Esteban Gabory, Roberto Grossi, Grigorios Loukides, Solon P. Pissis, Giulia Punzi, Michelle Sweering<br>
+    <i>33rd Annual Symposium on Combinatorial Pattern Matching (CPM)</i> (2022)<br>
+    <a href="https://doi.org/10.4230/LIPIcs.CPM.2022.16">DOI</a> · 
+    <a href="https://inria.hal.science/hal-03829979">HAL</a> · 
+    <a href="https://inria.hal.science/hal-03829979/file/LIPIcs-CPM-2022-16.pdf">PDF</a>
+  </li>
 
-      <li>
-        <b>Comparing Elastic-Degenerate Strings: Algorithms, Lower Bounds, and Applications</b>
-        <i>Esteban Gabory, Moses Njagi Mwaniki, Nadia Pisanti, Solon P. Pissis, Jakub Radoszewski, Michelle Sweering, Wiktor Zuba</i><br />
-        <i>34th Annual Symposium on Combinatorial Pattern Matching (CPM)</i> (2023)<br />
-        <a href="https://doi.org/10.4230/LIPIcs.CPM.2023.11" target="_blank" rel="noopener">DOI</a> · 
-        <a href="https://drops.dagstuhl.de/opus/volltexte/2023/17965" target="_blank" rel="noopener">PDF</a>
-      </li>
+  <li>
+    <b>Elastic-Degenerate String Matching with 1 Error</b><br>
+    Giulia Bernardini, Esteban Gabory, Solon P. Pissis, Leen Stougie, Michelle Sweering, Wiktor Zuba<br>
+    <i>15th Latin American Symposium on Theoretical Informatics (LATIN)</i> (2022)<br>
+    <a href="https://doi.org/10.1007/978-3-031-20624-5_2">DOI</a>
+  </li>
 
-      <li>
-        <b>Pangenome Comparison via ED Strings</b>
-        <i>Esteban Gabory, Moses Njagi Mwaniki, Nadia Pisanti, Solon P. Pissis, Jakub Radoszewski, Michelle Sweering, Wiktor Zuba</i><br />
-        <i>Frontiers in Bioinformatics</i> (2024)<br />
-        <a href="https://doi.org/10.3389/fbinf.2024.1397036" target="_blank" rel="noopener">DOI</a> · 
-        <a href="https://www.frontiersin.org/articles/10.3389/fbinf.2024.1397036/full" target="_blank" rel="noopener">Full Text</a>
-      </li>
+  <li>
+    <b>Comparing Elastic-Degenerate Strings: Algorithms, Lower Bounds, and Applications</b><br>
+    Esteban Gabory, Moses Njagi Mwaniki, Nadia Pisanti, Solon P. Pissis, Jakub Radoszewski, Michelle Sweering, Wiktor Zuba<br>
+    <i>34th Annual Symposium on Combinatorial Pattern Matching (CPM)</i> (2023)<br>
+    <a href="https://doi.org/10.4230/LIPIcs.CPM.2023.11">DOI</a> · 
+    <a href="https://drops.dagstuhl.de/opus/volltexte/2023/17965">PDF</a>
+  </li>
 
-      <li>
-        <b>Elastic-Degenerate String Matching with 1 Error or Mismatch</b>
-        <i>Giulia Bernardini, Estéban Gabory, Solon P. Pissis, Leen Stougie, Michelle Sweering, Wiktor Zuba</i><br />
-        <i>Theory of Computing Systems</i> (2024)<br />
-        <a href="https://doi.org/10.1007/s00224-024-10194-8" target="_blank" rel="noopener">DOI</a>
-      </li>
+  <li>
+    <b>Pangenome Comparison via ED Strings</b><br>
+    Esteban Gabory, Moses Njagi Mwaniki, Nadia Pisanti, Solon P. Pissis, Jakub Radoszewski, Michelle Sweering, Wiktor Zuba<br>
+    <i>Frontiers in Bioinformatics</i> (2024)<br>
+    <a href="https://doi.org/10.3389/fbinf.2024.1397036">DOI</a> · 
+    <a href="https://www.frontiersin.org/articles/10.3389/fbinf.2024.1397036/full">Full Text</a>
+  </li>
 
-      <li>
-        <b>A Unifying Taxonomy of Pattern Matching in Degenerate Strings and Founder Graphs</b>
-        <i>Rocco Ascone, Giulia Bernardini, Alessio Conte, Massimo Equi, Estéban Gabory, Roberto Grossi, Nadia Pisanti</i><br />
-        <i>24th International Workshop on Algorithms in Bioinformatics (WABI)</i> (2024)<br />
-        <a href="https://doi.org/10.4230/LIPIcs.WABI.2024.14" target="_blank" rel="noopener">DOI</a> · 
-        <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.WABI.2024.14" target="_blank" rel="noopener">PDF</a>
-      </li>
+  <li>
+    <b>Elastic-Degenerate String Matching with 1 Error or Mismatch</b><br>
+    Giulia Bernardini, Estéban Gabory, Solon P. Pissis, Leen Stougie, Michelle Sweering, Wiktor Zuba<br>
+    <i>Theory of Computing Systems</i> (2024)<br>
+    <a href="https://doi.org/10.1007/s00224-024-10194-8">DOI</a>
+  </li>
 
-      <li>
-        <b>Space-Efficient Indexes for Uncertain Strings</b>
-        <i>Esteban Gabory, Chang Liu, Grigorios Loukides, Solon P. Pissis, Wiktor Zuba</i><br />
-        <i>IEEE International Conference on Data Engineering (ICDE)</i> (2024)<br />
-        <a href="https://doi.org/10.1109/ICDE60146.2024.00367" target="_blank" rel="noopener">DOI</a>
-      </li>
+  <li>
+    <b>A Unifying Taxonomy of Pattern Matching in Degenerate Strings and Founder Graphs</b><br>
+    Rocco Ascone, Giulia Bernardini, Alessio Conte, Massimo Equi, Estéban Gabory, Roberto Grossi, Nadia Pisanti<br>
+    <i>24th International Workshop on Algorithms in Bioinformatics (WABI)</i> (2024)<br>
+    <a href="https://doi.org/10.4230/LIPIcs.WABI.2024.14">DOI</a> · 
+    <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.WABI.2024.14">PDF</a>
+  </li>
 
-      <li>
-        <b>Generalized De Bruijn Words, Invertible Necklaces, and the Burrows-Wheeler Transform</b>
-        <i>Gabriele Fici, Estéban Gabory</i><br />
-        <i>arXiv preprint</i> (2025)<br />
-        <a href="https://arxiv.org/abs/2502.12844" target="_blank" rel="noopener">arXiv</a>
-      </li>
+  <li>
+    <b>Space-Efficient Indexes for Uncertain Strings</b><br>
+    Esteban Gabory, Chang Liu, Grigorios Loukides, Solon P. Pissis, Wiktor Zuba<br>
+    <i>IEEE International Conference on Data Engineering (ICDE)</i> (2024)<br>
+    <a href="https://doi.org/10.1109/ICDE60146.2024.00367">DOI</a>
+  </li>
 
-      <li>
-        <b>Elastic-degenerate String Comparison</b>
-        <i>Estéban Gabory, Moses Njagi Mwaniki, Nadia Pisanti, Solon P. Pissis, Jakub Radoszewski, Michelle Sweering, Wiktor Zuba</i><br />
-        <i>Information and Computation</i> (2025)<br />
-        <a href="https://doi.org/10.1016/j.ic.2025.105296" target="_blank" rel="noopener">DOI</a>
-      </li>
+  <li>
+    <b>Generalized De Bruijn Words, Invertible Necklaces, and the Burrows-Wheeler Transform</b><br>
+    Gabriele Fici, Estéban Gabory<br>
+    <i>arXiv preprint</i> (2025)<br>
+    <a href="https://arxiv.org/abs/2502.12844">arXiv</a>
+  </li>
 
-    </ul>
+  <li>
+    <b>Elastic-degenerate String Comparison</b><br>
+    Estéban Gabory, Moses Njagi Mwaniki, Nadia Pisanti, Solon P. Pissis, Jakub Radoszewski, Michelle Sweering, Wiktor Zuba<br>
+    <i>Information and Computation</i> (2025)<br>
+    <a href="https://doi.org/10.1016/j.ic.2025.105296">DOI</a>
+  </li>
+
+</ul>
+
+
   </section>
 
 </body>
