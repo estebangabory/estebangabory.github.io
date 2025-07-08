@@ -34,10 +34,14 @@
       padding: 0 1rem;
     }
 
+    .content {
+      flex: 3 1 500px;
+      padding-right: 2rem;
+    }
+
     .portrait {
-      flex: 1 1 250px;
-      max-width: 250px;
-      margin-right: 2rem;
+      flex: 1 1 150px;
+      max-width: 150px;
     }
 
     .portrait img {
@@ -45,22 +49,51 @@
       border-radius: 10px;
     }
 
-    .content {
-      flex: 3 1 400px;
-    }
-
     .content p {
       margin-bottom: 1rem;
     }
 
+    .publications {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .publications h2 {
+      font-size: 1.6rem;
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+
+    .publications ul {
+      padding-left: 1.2rem;
+    }
+
+    .publications li {
+      margin-bottom: 0.8rem;
+    }
+
+    .publications a {
+      color: #003366;
+      text-decoration: none;
+    }
+
+    .publications a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       .container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
       }
 
+      .content {
+        padding-right: 0;
+      }
+
       .portrait {
-        margin: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
       }
     }
   </style>
@@ -72,10 +105,6 @@
   </header>
 
   <main class="container">
-    <div class="portrait">
-      <img src="portrait.jpg" alt="Portrait of Estéban Gabory" />
-    </div>
-
     <div class="content">
       <p>I am currently a postdoctoral researcher at the University of Palermo, working in the field of string algorithms and combinatorics on words. My interests span both the theoretical foundations and algorithmic applications of string processing, particularly in contexts such as bioinformatics.</p>
 
@@ -85,7 +114,93 @@
 
       <p>In addition, I am involved in projects concerning consensus problems, studied from the perspective of parameterized complexity.</p>
     </div>
+
+    <div class="portrait">
+      <img src="portrait.jpg" alt="Portrait of Estéban Gabory" />
+    </div>
   </main>
+
+  <section class="publications">
+<h2>Publications</h2>
+<ul>
+
+  <li>
+    <b>On Strings Having the Same Length-k Substrings</b><br>
+    Giulia Bernardini, Alessio Conte, Esteban Gabory, Roberto Grossi, Grigorios Loukides, Solon P. Pissis, Giulia Punzi, Michelle Sweering<br>
+    <i>33rd Annual Symposium on Combinatorial Pattern Matching (CPM), 2022. Prague, Czech Republic.</i><br>
+    <a href="https://doi.org/10.4230/LIPIcs.CPM.2022.16">DOI</a> · 
+    <a href="https://inria.hal.science/hal-03829979">HAL</a> · 
+    <a href="https://inria.hal.science/hal-03829979/file/LIPIcs-CPM-2022-16.pdf">PDF</a>
+  </li>
+
+  <li>
+    <b>Elastic-Degenerate String Matching with 1 Error</b><br>
+    Giulia Bernardini, Esteban Gabory, Solon P. Pissis, Leen Stougie, Michelle Sweering, Wiktor Zuba<br>
+    <i>LATIN 2022: Theoretical Informatics</i><br>
+    <a href="https://doi.org/10.1007/978-3-031-20624-5_2">DOI</a>
+  </li>
+
+  <li>
+    <b>Comparing Elastic-Degenerate Strings: Algorithms, Lower Bounds, and Applications</b><br>
+    Esteban Gabory, Moses Njagi Mwaniki, Nadia Pisanti, Solon P. Pissis, Jakub Radoszewski, Michelle Sweering, Wiktor Zuba<br>
+    <i>34th Annual Symposium on Combinatorial Pattern Matching (CPM 2023)</i><br>
+    <a href="https://doi.org/10.4230/LIPIcs.CPM.2023.11">DOI</a> · 
+    <a href="https://drops.dagstuhl.de/opus/volltexte/2023/17965">PDF</a>
+  </li>
+
+  <li>
+    <b>Periodicity of Degenerate Strings</b><br>
+    Estéban Gabory, Eric Rivals, Michelle Sweering, Hilde Verbeek, Pengfei Wang<br>
+    <i>Proc. of 26th Prague Stringology Conference (PSC), 2023</i><br>
+    <a href="https://www.stringology.org/event/2023/ps23gabory.pdf">PDF (via stringology.org, if available)</a>
+  </li>
+
+  <li>
+    <b>Pangenome Comparison via ED Strings</b><br>
+    Esteban Gabory, Moses Njagi Mwaniki, Nadia Pisanti, Solon P. Pissis, Jakub Radoszewski, Michelle Sweering, Wiktor Zuba<br>
+    <i>Frontiers in Bioinformatics, 2024</i><br>
+    <a href="https://doi.org/10.3389/fbinf.2024.1397036">DOI</a> · 
+    <a href="https://www.frontiersin.org/articles/10.3389/fbinf.2024.1397036/full">Full Text</a>
+  </li>
+
+  <li>
+    <b>Elastic-Degenerate String Matching with 1 Error or Mismatch</b><br>
+    Giulia Bernardini, Estéban Gabory, Solon P. Pissis, Leen Stougie, Michelle Sweering, Wiktor Zuba<br>
+    <i>Theory of Computing Systems, 2024</i><br>
+    <a href="https://doi.org/10.1007/s00224-024-10194-8">DOI</a>
+  </li>
+
+  <li>
+    <b>A Unifying Taxonomy of Pattern Matching in Degenerate Strings and Founder Graphs</b><br>
+    Rocco Ascone, Giulia Bernardini, Alessio Conte, Massimo Equi, Estéban Gabory, Roberto Grossi, Nadia Pisanti<br>
+    <i>24th International Workshop on Algorithms in Bioinformatics (WABI), 2024</i><br>
+    <a href="https://doi.org/10.4230/LIPIcs.WABI.2024.14">DOI</a> · 
+    <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.WABI.2024.14">PDF</a>
+  </li>
+
+  <li>
+    <b>Space-Efficient Indexes for Uncertain Strings</b><br>
+    Esteban Gabory, Chang Liu, Grigorios Loukides, Solon P. Pissis, Wiktor Zuba<br>
+    <i>IEEE ICDE 2024</i><br>
+    <a href="https://doi.org/10.1109/ICDE60146.2024.00367">DOI</a>
+  </li>
+
+  <li>
+    <b>Generalized De Bruijn Words, Invertible Necklaces, and the Burrows-Wheeler Transform</b><br>
+    Gabriele Fici, Estéban Gabory<br>
+    <i>arXiv preprint, 2025</i><br>
+    <a href="https://arxiv.org/abs/2502.12844">arXiv</a>
+  </li>
+
+  <li>
+    <b>Elastic-degenerate String Comparison</b><br>
+    Estéban Gabory, Moses Njagi Mwaniki, Nadia Pisanti, Solon P. Pissis, Jakub Radoszewski, Michelle Sweering, Wiktor Zuba<br>
+    <i>Information and Computation, 2025</i><br>
+    <a href="https://doi.org/10.1016/j.ic.2025.105296">DOI</a>
+  </li>
+
+</ul>
+  </section>
 
 </body>
 </html>
