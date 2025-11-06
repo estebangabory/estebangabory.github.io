@@ -48,6 +48,17 @@ header h1 {
   margin-bottom: 1rem;
 }
 
+/* --- Fix for links in the main content --- */
+.content a {
+  color: #003366;
+  font-weight: 600; /* Makes them stand out a bit */
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
 /* --- Portrait --- */
 .portrait {
   flex: 1 1 150px;
