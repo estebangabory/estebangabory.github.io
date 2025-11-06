@@ -1,0 +1,164 @@
+/* --- General Body & Font --- */
+body {
+  /* Modern, system-native font stack. Very performant. */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* --- Main Content Area (Container) --- */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.content {
+  flex: 3 1 500px;
+  padding-right: 2rem;
+}
+
+/* Added heading style for the new "Research" h2 */
+.content h2 {
+  font-size: 1.6rem;
+  color: #003366;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+/* --- Portrait --- */
+.portrait {
+  flex: 1 1 150px;
+  max-width: 150px;
+}
+
+.portrait img {
+  width: 100%;
+  border-radius: 10px;
+  /* A subtle shadow can make the portrait pop a bit */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Publications Section --- */
+.publications {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.publications h2 {
+  font-size: 1.6rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+/* Added style for the new year headings (h3) */
+.publications h3 {
+  font-size: 1.3rem;
+  color: #555;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.publications ul {
+  padding-left: 1.2rem;
+  /* Reset list style for cleaner management */
+  list-style: none;
+  padding-left: 0;
+}
+
+.publications li {
+  margin-bottom: 1.2rem; /* Increased C-spacing */
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+/* Adds a small decorative bullet */
+.publications li::before {
+  content: "■";
+  color: #003366;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 0.8em;
+}
+
+
+.publications a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: 600; /* Make links slightly bolder */
+}
+
+.publications a:hover {
+  text-decoration: underline;
+}
+
+/* --- NEW FOOTER STYLES --- */
+footer {
+  margin-top: 4rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: #003366;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive Media Query --- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .content {
+    padding-right: 0;
+  }
+
+  .portrait {
+    margin-bottom: 1.5rem;
+  }
+}
